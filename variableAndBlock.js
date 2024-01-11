@@ -11,8 +11,6 @@ function block(params) {
 
 }
 
-
-
 // 試圖在函式外部訪問區域變數，並解釋結果。
 console.log(variable)
 
