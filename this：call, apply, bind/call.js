@@ -6,15 +6,15 @@ let family = {
   num2: 2
 }
 
-function fn(para1, para2) {
-  console.log(this, para1, para2);
-  this.num1 = para1
-  this.num2 = para2
+function fn(...para) {
+  console.log(this, para);
+  this.num1 = para[0]
+  this.num2 = para[1]
   console.log(this)
 }
 
 // simple call
-fn(family, 3, 4)
+// fn(family, 3, 4)
 
 // 使用call 傳入自己的this
 fn.call(family, 3, 4)
